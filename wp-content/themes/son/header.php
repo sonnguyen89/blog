@@ -7,8 +7,10 @@
 			<?php bloginfo('name');?>
 		</title>
 		<?php wp_enqueue_script("jquery"); ?>
+		
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/skeleton.css" />
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/flexslider.css" />
 		<?php wp_head(); ?>
 			
 		
