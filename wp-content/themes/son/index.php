@@ -27,7 +27,11 @@
 </section><!--/.content-->
 
 
-<?php get_template_part('index-loop')?>
+<?php //get_template_part('index-loop')?>
+
+<?php //the_post_thumbnail('featured');?>
+<?php //the_post_thumbnail('post-thumb');?>
+
 
 <?php get_sidebar(); ?>
 
