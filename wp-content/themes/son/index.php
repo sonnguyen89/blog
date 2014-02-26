@@ -37,8 +37,9 @@
 	<ul class="slides">
 		
 		<?php
-		query_posts(array('category_name' => 'Games', 'posts_per_page' => 3));
-		if(have_posts()) : while(have_posts()) : the_post();
+		$args = array('category_name' => 'Games','posts_per_page'=>3);
+		$query = new WP_Query($args);
+		 while($query->have_posts()) : $query->the_post();
 		?>
 	
 		  <li class="featured-game">
@@ -52,12 +53,38 @@
 	  
 		<?php
 		    endwhile;
-			endif;
-			wp_reset_query();
+			
+			
 		?>
 	</ul>
   </div>
 </section>
+<section class="internal-x five columns row">
+	
+	advertisement
+
+</section>
+
+<section class="new-games eleven columns row">
+	<h1>NEW GAMES</h1>
+	
+	<?php 
+		$args = array('posts_per_page' => 6);
+		$query= new WP_Query($args);
+		while($query->have_posts()):
+		 $query->the_post();
+		
+		
+	?>
+	<a href="<?php the_permalink();?>">
+		<div class="game-thumb">
+			<?php the_post_thumbnail('post-thumb');  ?>
+			<span><?php the_title(); ?></span>
+		</div>
+	</a>
+	<?php  endwhile; ?>
+</section>
+	
 </div>
 <?php get_sidebar(); ?>
 
