@@ -11,6 +11,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+body{
+	line-height:1;
+	font-family: sans-serif;
+}
 ol, ul {
 	list-style: none;
 }
@@ -28,6 +32,8 @@ table {
 }
 h1,h2,h3,h4,h5,h6 {
 	font-family:sans-serif;
+	margin-bottom:10px;
+	margin-top:10px;
 }
 h1{
 	font-size:1.7em;
@@ -54,9 +60,9 @@ h6{
 }
 
 .nav-bar{
-	background: #5ca5cc;
+	background: #4b4b4b;
 	height:50px;
-	box-shadow:2px 2px 0 #b5b5b5;
+	 margin-bottom: 10px;
 }
 
 .main-nav ul, .main-nav li{
@@ -69,10 +75,11 @@ h6{
 	color:#ffffff;
 	font-family: sans-serif;
 	display:block;
+	text-transform: uppercase;
 }
 
 .main-nav a:hover{
-	background-color: #4e91b5;
+	background-color: #56c928;
 }
 
 
@@ -93,9 +100,10 @@ h6{
 	top: -999999px;
 	left:0;
 	opacity:0;
-	background: #5ca5cc;
+	background: #4b4b4b;
 	text-align:left;
-	box-shadow:2px 2px 0 #b5b5b5;
+	z-index: 1;
+	padding:0;
 }
 
 .main-nav ul li:hover > ul{
@@ -104,12 +112,11 @@ h6{
 	opacity:1;	
 }
 #show-nav{
-	display:none;background:#5CA5CC;
+	display:none;background:#4b4b4b;
 }
 
 #close-nav{
-	display:none;background:#5CA5CC;text-align:right;font-family: sans-serif;
-	box-shadow:2px 2px 0 #b5b5b5;
+	display:none;background:#4b4b4b;text-align:right;font-family: sans-serif;
 }
 
 /* #Mobile (Landscape)
@@ -213,20 +220,49 @@ h6{
 	height:250px;
 }
 .new-games h1{
-	background:#5ca5cc;
+	background:#4b4b4b;
 	color:#ffffff;
+	padding: 6px;
+}
+.new-games ul{
+	
+	padding:0;
 }
 .new-games .game-thumb{
 	display:block;
-	float:left;width:50%;
+	float:left;width:49%;
 	margin-bottom:10px;
-	
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	-o-transition:all .25s ease;
+	transition:all .25s ease;
+	border-left: 3px solid transparent;
 }
 a{
 	text-decoration: none;
 }
-.new-games .game-thumb span{
-	vertical-align: top;	
+.new-games .game-thumb img{
+	float:left;
+	margin-right:10px;
+}
+.new-games .game-thumb .title-desc{
+	vertical-align: top;
+	font-weight: bolder;
+	color:#4b4b4b;
+		
+}
+.new-games .game-thumb div{
+	margin-top:5px;
+}
+.new-games .game-thumb:hover{
+	background:#eee;
+	border-left: 5px solid #56c928;
+}
+.new-games .game-thumb p{
+	margin:0;
+	padding:0;
+	color:#4b4b4b;
+	text-decoration:none;
 }
 @media only screen and (max-width: 767px) {
 	.featured-game .caption {

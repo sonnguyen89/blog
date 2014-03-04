@@ -6,6 +6,7 @@
 			<?php wp_title("|",'true','right');?>
 			<?php bloginfo('name');?>
 		</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1"></meta>
 		<?php wp_enqueue_script("jquery"); ?>
 		
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />

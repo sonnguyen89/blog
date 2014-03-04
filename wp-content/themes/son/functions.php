@@ -23,7 +23,8 @@ function create_post_type(){
 	  ),
 	  'public' =>true,
 	  'menu_position' => 5,
-	  'rewrite' => array('slug'=>'games')
+	  'rewrite' => array('slug'=>'games'),
+	  'supports' => array('title','editor','author','thumbnail','excerpt','comments')
 	  )
 	);
 }

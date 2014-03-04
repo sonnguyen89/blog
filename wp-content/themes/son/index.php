@@ -37,7 +37,7 @@
 	<ul class="slides">
 		
 		<?php
-		$args = array('category_name' => 'Games','posts_per_page'=>3);
+		$args = array('post_type'=>array('post','awfulmedia_games'),'posts_per_page'=>3);
 		$query = new WP_Query($args);
 		 while($query->have_posts()) : $query->the_post();
 		?>
@@ -67,22 +67,27 @@
 
 <section class="new-games eleven columns row">
 	<h1>NEW GAMES</h1>
-	
+	<ul>
 	<?php 
-		$args = array('posts_per_page' => 6);
+		$args = array('posts_per_page' => 6,'post_type'=>array('post','awfulmedia_games'));
 		$query= new WP_Query($args);
 		while($query->have_posts()):
 		 $query->the_post();
 		
 		
 	?>
+	
 	<a href="<?php the_permalink();?>">
-		<div class="game-thumb">
+		<li class="game-thumb">
 			<?php the_post_thumbnail('post-thumb');  ?>
-			<span><?php the_title(); ?></span>
-		</div>
+			<div>
+			<span class="title-desc"><?php the_title(); ?></span>
+			<p><?php the_field('description'); ?></p>
+			</div>
+		</li>
 	</a>
 	<?php  endwhile; ?>
+	</ul>
 </section>
 	
 </div>
