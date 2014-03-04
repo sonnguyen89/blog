@@ -33,31 +33,7 @@
 <?php //the_post_thumbnail('post-thumb');?>
 <div class="container">
 <section class="eleven columns row">
-  <div class="flexslider">
-	<ul class="slides">
-		
-		<?php
-		$args = array('post_type'=>array('post','awfulmedia_games'),'posts_per_page'=>3);
-		$query = new WP_Query($args);
-		 while($query->have_posts()) : $query->the_post();
-		?>
-	
-		  <li class="featured-game">
-			<?php the_post_thumbnail('featured'); ?>
-			<div class="caption">
-				<a href="#" class="game-title"><?php the_title();?></a>
-				<?php the_excerpt(); ?>
-				<a href="#" class="playnow">Play Now</a>
-			</div>
-		  </li>
-	  
-		<?php
-		    endwhile;
-			
-			
-		?>
-	</ul>
-  </div>
+<?php get_template_part('slider');?>
 </section>
 <section class="internal-x five columns row">
 	
@@ -77,15 +53,17 @@
 		
 	?>
 	
-	<a href="<?php the_permalink();?>">
+	
 		<li class="game-thumb">
-			<?php the_post_thumbnail('post-thumb');  ?>
-			<div>
-			<span class="title-desc"><?php the_title(); ?></span>
-			<p><?php the_field('description'); ?></p>
-			</div>
+			<a href="<?php the_permalink();?>">
+				<?php the_post_thumbnail('post-thumb');  ?>
+				<div>
+				<span class="title-desc"><?php the_title(); ?></span>
+				<p><?php the_field('description'); ?></p>
+				</div>
+			</a>
 		</li>
-	</a>
+	
 	<?php  endwhile; ?>
 	</ul>
 </section>
