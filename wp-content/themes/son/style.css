@@ -172,8 +172,19 @@ h6{
 	}
     
     
-    
-    }
+	.new-games .game-thumb{
+	width:100%;
+	float:none;
+	}
+	.new-games .game-thumb img{
+	float:none;
+	margin-right:10px;
+	}
+	.new-games .game-thumb div{
+		float:right;
+		width:60%;
+	}	
+}
 
 /*     This is the CSS for the slider */
 .featured-game{
@@ -269,9 +280,33 @@ a{
 		width: 85%;
 		opacity: .70;
 	}	
+	.new-games .game-thumb{
+	width:100%;
+	float:none;
+	}
+	.new-games .game-thumb img{
+	float:none;
+	margin-right:10px;
+	}
+	.new-games .game-thumb div{
+		float:right;
+		width:60%;
+	}	
 }
 @media only screen and (max-width: 479px){
 	.featured-game p {
 		display: none;
+	}
+	.new-games .game-thumb{
+	width:100%;
+	float:none;
+	}
+	.new-games .game-thumb img{
+	float:none;
+	margin-right:10px;
+	}
+	.new-games .game-thumb div{
+		float:right;
+		width:50%;
 	}	
 }
