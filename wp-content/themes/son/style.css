@@ -53,8 +53,9 @@ h5{
 h6{
 	font-size:1.2em;
 }
-
-
+a{
+	text-decoration: none;
+}
 .container .five.columns a img.logo{
 	width: 150px;
 }
@@ -236,7 +237,6 @@ h6{
 	padding: 6px;
 }
 .new-games ul{
-	
 	padding:0;
 }
 .new-games .game-thumb{
@@ -249,9 +249,43 @@ h6{
 	transition:all .25s ease;
 	border-left: 3px solid transparent;
 }
-a{
-	text-decoration: none;
+.sidebar-list .game-thumb{
+	float:none;
+	width:100%;	
+	border:none;
 }
+.sidebar-list .game-thumb a{
+height:auto;
+}
+.sidebar-list .game-thumb img{
+	width:100%;
+	height:auto;	
+}
+.sidebar-list ul{
+	margin:0;
+	padding:0;
+}
+
+.sidebar-list .game-thumb img{
+	float:left;
+	margin-right:10px;
+}
+.sidebar-list .game-thumb .title-desc{
+	vertical-align: top;
+	font-weight: bolder;
+	color:#4b4b4b;
+		
+}
+
+.sidebar-list .game-thumb p{
+	margin:0;
+	padding:0;
+	color:#4b4b4b;
+	text-decoration:none;
+}
+
+
+
 .new-games .game-thumb img{
 	float:left;
 	margin-right:10px;
