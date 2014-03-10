@@ -8,7 +8,6 @@
 		</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1"></meta>
 		<?php wp_enqueue_script("jquery"); ?>
-		
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/skeleton.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/flexslider.css" />

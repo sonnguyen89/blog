@@ -3,9 +3,7 @@
 * Author : Son Nguyen
 * Description: Son's blog 
 */
-
-
-
+@import url(http://fonts.googleapis.com/css?family=Gafata);
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -14,6 +12,7 @@ footer, header, hgroup, menu, nav, section {
 body{
 	line-height:1;
 	font-family: sans-serif;
+	background-image: url("img/tpl_bg.gif");
 }
 ol, ul {
 	list-style: none;
@@ -63,7 +62,7 @@ a{
 .nav-bar{
 	background: #4b4b4b;
 	height:50px;
-	 margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .main-nav ul, .main-nav li{
@@ -74,7 +73,7 @@ a{
 	text-decoration: none;
 	line-height: 50px;
 	color:#ffffff;
-	font-family: sans-serif;
+	font-family:cursive;
 	display:block;
 	text-transform: uppercase;
 }
@@ -231,10 +230,12 @@ a{
 	display:block;
 	height:250px;
 }
+.sidebar-list h1,
 .new-games h1{
 	background:#4b4b4b;
 	color:#ffffff;
 	padding: 6px;
+	font-family:cursive;
 }
 .new-games ul{
 	padding:0;
@@ -249,6 +250,7 @@ a{
 	transition:all .25s ease;
 	border-left: 3px solid transparent;
 }
+
 .sidebar-list .game-thumb{
 	float:none;
 	width:100%;	
@@ -345,7 +347,13 @@ height:auto;
 	}	
 }
 
-
+footer.sixteen.columns{
+	background: none repeat scroll 0 0 #393939;
+	color:#fff;
+}
+footer.sixteen.columns a{
+	text-decoration: none;color:#A8A8A8;font-family: "BebasNeueRegular",Arial,Helvetica,sans-serif
+}
 footer .one-third.column{
 	margin:0 6px;
 	
@@ -353,4 +361,13 @@ footer .one-third.column{
 footer .one-third.column ul{
 	padding:0;
 	
+}
+
+.game-container p{
+	color:#fff;
+}
+.game-container h1{
+	color:#fff;
+	padding:10px;
+	background:#212121;
 }
