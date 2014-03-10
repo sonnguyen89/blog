@@ -4,7 +4,11 @@
 	</head>
 	
 <body>
-	
+<div class="container">
+	<footer class='sixteen columns row'>
+		<?php dynamic_sidebar('footer-widgets'); ?>
+	</footer>  
+	</div>
 	<script>
 	jQuery("#show-nav").click(function (){
 		jQuery("#main-nav").show("slow");
