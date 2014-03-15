@@ -1,4 +1,9 @@
 <?php
+if(get_option('thread_comments')){
+	wp_enqueue_script('comment-reply');
+}
+
+
 //create Nav menu
 if(function_exists('register_nav_menus')){
 	register_nav_menus(array("primary" => "Header Navigation"));
@@ -46,7 +51,8 @@ function create_post_type(){
 	  'public' =>true,
 	  'menu_position' => 5,
 	  'rewrite' => array('slug'=>'games'),
-	  'supports' => array('title','editor','author','thumbnail','excerpt','comments')
+	  'supports' => array('title','editor','author','thumbnail','excerpt','comments'),
+	  'taxonomies'=>array('post_tag')
 	  )
 	);
 }
@@ -62,7 +68,7 @@ function getPostViews($postID){
 		add_post_meta($postID, $count_key, '0');
 		return "0 View";
 	}
-	return $count.' Views';
+	return $count;
 }
 function setPostViews($postID) {
 	$count_key = 'post_views_count';
@@ -78,3 +84,62 @@ function setPostViews($postID) {
 }
 // Remove issues with prefetching adding extra views
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+function customm_comments($comment,$args,$dept){
+	$GLOBALS['comment'] = $comment; ?>
+	   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+	     <div id="comment-<?php comment_ID(); ?>">
+	      <header class="comment-header vcard">
+	         <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
+	         <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+	         <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','') ?></div>
+	      </header>
+	      <?php if ($comment->comment_approved == '0') : ?>
+	         <em><?php _e('Your comment is awaiting moderation.') ?></em>
+	         <br>
+	      <?php endif; ?>
+	
+	      <?php comment_text(); ?>
+	
+	      <div class="reply">
+	         <?php //comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
+	         <?php 
+	         comment_reply_link(
+	         array(
+	         'reply_text'   => __( 'Reply', OXO_TEXTDOMAIN )
+	         ,'depth'        => isset( $args['args']['depth'] ) ? $args['args']['depth'] : (int) 3
+	         ,'max_depth'    => isset( $args['args']['max_depth'] ) ? $args['args']['max_depth'] : (int) 5
+	         )
+	         ,get_comment_ID()
+	         ,$post->ID
+	         );
+	         
+	         
+	         ?>
+	      </div>
+	     </div>
+	     <hr/>
+	    <?php
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

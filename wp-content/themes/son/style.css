@@ -12,7 +12,6 @@ footer, header, hgroup, menu, nav, section {
 body{
 	line-height:1;
 	font-family: sans-serif;
-	background-image: url("img/tpl_bg.gif");
 }
 ol, ul {
 	list-style: none;
@@ -364,10 +363,28 @@ footer .one-third.column ul{
 }
 
 .game-container p{
-	color:#fff;
 }
 .game-container h1{
 	color:#fff;
 	padding:10px;
 	background:#212121;
+}
+
+aside.main-sidebar .x-container{
+	padding-top: 10px;
+	height:auto;
+}
+aside.main-sidebar .x-container h2{
+    color: #212121;
+    margin: 0;
+    padding: 11px 10px;
+}
+aside.main-sidebar .x-container ul{
+	padding:0 13px;
+}
+
+
+.comment.depth-1{
+	margin-bottom: 20px;
+	
 }

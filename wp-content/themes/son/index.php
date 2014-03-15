@@ -70,7 +70,7 @@
 	<?php 
 		$args = array('posts_per_page' => 6,
 					'post_type'=>array('post','awfulmedia_games'),
-					'orderby'=>'meta_value',
+					'orderby'=>'meta_value_num',
 					'meta_key'=>'post_views_count');
 		$query= new WP_Query($args);
 		while($query->have_posts()):
@@ -84,7 +84,7 @@
 				<div>
 				<span class="title-desc"><?php the_title(); ?></span>
 				<p><?php the_field('description'); ?></p>
-				<p><?php echo getPostViews(get_the_ID()); ?></p>
+				<p>Views: <?php echo getPostViews(get_the_ID()); ?></p>
 				</div>
 			</a>
 		</li>
