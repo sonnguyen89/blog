@@ -45,10 +45,16 @@ get_header(); // fetch header template ?>
 	<?php // End the first if ?>
 	<?php endif; ?>
 	</div>
+	
+	
+	<aside class="six columns main-sidebar">
+	<div class="x-container"><?php dynamic_sidebar('sidebar-widgets'); ?></div>
+</aside>
 </div>
 
 
 
+
 <?php  //fetch sidebar and footer templates ?>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
