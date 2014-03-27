@@ -52,13 +52,33 @@ function create_post_type(){
 	  'menu_position' => 5,
 	  'rewrite' => array('slug'=>'games'),
 	  'supports' => array('title','editor','author','thumbnail','excerpt','comments'),
-	  'taxonomies'=>array('post_tag')
+	  'taxonomies'=>array('category','post_tag'),
+	  'has_archive' => true
 	  )
 	);
+	register_post_type_archives('awfulmedia_games', 'awfulmedia_games');
 }
 
 add_action('init', 'create_post_type');
-
+function register_post_type_archives( $post_type, $base_path = '' ) {
+	global $wp_rewrite;
+	if ( !$base_path ) {
+		$base_path = $post_type;
+	}
+	$rules = $wp_rewrite->generate_rewrite_rules($base_path);
+	$rules[$base_path.'/?$'] = 'index.php?paged=1';
+	foreach ( $rules as $regex=>$redirect ) {
+		if ( strpos($redirect, 'attachment=') == FALSE ) {
+			$redirect .= '&post_type='.$post_type;
+			if (  0 < preg_match_all('@\$([0-9])@', $redirect, $matches) ) {
+				for ( $i=0 ; $i < count($matches[0]) ; $i++ ) {
+					$redirect = str_replace($matches[0][$i], '$matches['.$matches[1][$i].']', $redirect);
+				}
+			}
+		}
+		add_rewrite_rule($regex, $redirect, 'top');
+	}
+}
 
 function getPostViews($postID){
 	$count_key = 'post_views_count';
