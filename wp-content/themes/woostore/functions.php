@@ -3,7 +3,8 @@
 /*-----------------------------------------------------------------------------------*/
 /* Start WooThemes Functions - Please refrain from editing this section */
 /*-----------------------------------------------------------------------------------*/
-
+//add  WooCommerce support for woostore theme
+add_theme_support('woocommerce');
 // Set path to WooFramework and theme specific functions
 $functions_path = get_template_directory() . '/functions/';
 $includes_path = get_template_directory() . '/includes/';
