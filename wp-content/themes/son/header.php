@@ -26,7 +26,8 @@
 			<div class="main-nav sixteen columns" id="show-nav"><a href="#">Toggle Navigation</a></div>
 			<div class="main-nav sixteen columns" id="close-nav"><a href="#">Close Navigation</a></div>
 			<div class="sixteen columns nav-bar">
-				<?php wp_nav_menu(array('container_class' =>'main-nav','container' =>'nav','container_id' =>'main-nav')); ?>
+				<?php //wp_nav_menu(array('container_class' =>'main-nav','container' =>'nav','container_id' =>'main-nav')); ?>
+                <?php  wp_nav_menu( array( 'theme_location' => 'primary','container_class' =>'main-nav','container_id' =>'main-nav') );  ?>
 			</div>
 			</header>
 		</div>
