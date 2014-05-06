@@ -6,7 +6,7 @@
 get_header(); // fetch header template ?> 
 
 
-<div class="container">
+<div class="container body-content">
 <div class="row ten columns game-container post-meta"> 
 	<h1 class="archive-title">Category: <?php $category_id = get_query_var( 'cat' ); echo get_cat_name($category_id); ?></h1>
 	

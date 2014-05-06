@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 
-
-<div class="container">
+<div class="wrapper">
+<div class="container body-content">
 <div class="row ten columns game-container post-meta"> 
 <h1><?php the_title(); ?></h1>
 <p>Published by:<?php the_field('publisher');?></p>
@@ -19,7 +19,7 @@
 	<?php comments_template();?>
 </div>
 
-<aside class="six columns main-sidebar">
+<aside class="row six columns main-sidebar">
 	<div class="x-container"><?php dynamic_sidebar('sidebar-widgets'); ?></div>
 </aside>
 
@@ -31,3 +31,4 @@
 <?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>
+</div>

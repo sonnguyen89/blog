@@ -18,17 +18,19 @@
 	
 	
 	<body>
-		<div class="container">
+		<div class="container ">
 			<header>
 			<div class="five columns clearfix">
-				<a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('template_url');?>/img/logo.jpg" tilte="<?php bloginfo('title');?>"  class="logo"/></a>
+				<a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('template_url');?>/img/logo.png" tilte="<?php bloginfo('title');?>"  class="logo"/></a>
 			</div>
 			<div class="main-nav sixteen columns" id="show-nav"><a href="#">Toggle Navigation</a></div>
 			<div class="main-nav sixteen columns" id="close-nav"><a href="#">Close Navigation</a></div>
-			<div class="sixteen columns nav-bar">
+			<div class="body-content">
+            <div class="sixteen columns nav-bar">
 				<?php //wp_nav_menu(array('container_class' =>'main-nav','container' =>'nav','container_id' =>'main-nav')); ?>
                 <?php  wp_nav_menu( array( 'theme_location' => 'primary','container_class' =>'main-nav','container_id' =>'main-nav') );  ?>
 			</div>
+            </div>
 			</header>
 		</div>
 	

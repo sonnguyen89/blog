@@ -4,7 +4,7 @@
 	</head>
 	
 <body>
-<div class="container">
+<div class="container body-content">
 	<footer class='sixteen columns row'>
 		<?php dynamic_sidebar('footer-widgets'); ?>
 	</footer>  

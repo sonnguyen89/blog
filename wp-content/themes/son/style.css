@@ -11,7 +11,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body{
 	line-height:1;
-	font-family: sans-serif;
+	font-family: sans-serif;background-color: #0e0e0e;
 }
 ol, ul {
 	list-style: none;
@@ -34,28 +34,36 @@ h1,h2,h3,h4,h5,h6 {
 	margin-top:10px;
 }
 h1{
-	font-size:1.7em;
-}
-h2{
 	font-size:1.6em;
 }
-h3{
+h2{
 	font-size:1.5em;
 }
-h4{
-	font-size:1.4em;
+h3{
+	font-size:1.45em;
 }
-h5{
+h4{
 	font-size:1.3em;
 }
-h6{
+h5{
 	font-size:1.2em;
+}
+h6{
+	font-size:1.1em;
 }
 a{
 	text-decoration: none;
 }
+.wrapper{
+    background-image: url("img/background.jpg");
+}
+.body-content{
+    background-color: #ffffff;
+}
+
 .container .five.columns a img.logo{
-	width: 150px;
+	width: 500px;
+    padding: 15px 0px;
 }
 
 .nav-bar{
@@ -72,13 +80,15 @@ a{
 	text-decoration: none;
 	line-height: 50px;
 	color:#ffffff;
-	font-family:cursive;
+    font-family:'Arial Black',Arial,Helvetica,Sans-Serif;
 	display:block;
 	text-transform: uppercase;
+    font-weight: 500;
 }
 
 .main-nav a:hover{
-	background-color: #56c928;
+	background-color: #1b1a1a;
+    color:#f03838;
 }
 
 
@@ -169,11 +179,15 @@ a{
     #show-nav{
 	display:block;
 	}
-    
-    
+
+    .game-thumb{
+      border-bottom: 1px solid #D2D2D2;
+      padding-bottom: 10px;
+     }
 	.new-games .game-thumb{
 	width:100%;
 	float:none;
+
 	}
 	.new-games .game-thumb img{
 	float:none;
@@ -218,7 +232,7 @@ a{
 .featured-game .playnow {
 	text-align: center;
 	text-decoration: none;
-	background: #56C928;
+	background: #f03838;
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
@@ -234,7 +248,7 @@ a{
 	background:#4b4b4b;
 	color:#ffffff;
 	padding: 6px;
-	font-family:cursive;
+	font-family:'Arial Black',Arial,Helvetica,Sans-Serif;
 }
 .new-games ul{
 	padding:0;
@@ -302,7 +316,7 @@ height:auto;
 }
 .new-games .game-thumb:hover{
 	background:#eee;
-	border-left: 5px solid #56c928;
+	border-left: 5px solid #f03838;
 }
 .new-games .game-thumb p{
 	margin:0;

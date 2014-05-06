@@ -13,8 +13,8 @@
  */
 
 get_header(); ?>
-
-    <div class="container">
+<div class="wrapper">
+    <div class="container body-content">
         <div class="row ten columns game-container post-meta">
 
         <?php while ( have_posts() ) : the_post(); ?>
@@ -27,3 +27,4 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+ </div>
