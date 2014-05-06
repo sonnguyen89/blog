@@ -11,8 +11,8 @@ while($query->have_posts()) : $query->the_post();
 			<?php the_post_thumbnail('featured'); ?>
 			<div class="caption">
 				<a href="<?php  the_permalink(); ?>" class="game-title"><?php the_title();?></a>
-				<?php the_excerpt(); ?>
-				<a href="<?php  the_permalink(); ?>" class="playnow">Play Now</a>
+				<?php  $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,25).'....'; ?>
+				<a href="<?php  the_permalink(); ?>" class="playnow">Read More</a>
 			</div>
 		  </li>
 	  
